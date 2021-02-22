@@ -298,3 +298,13 @@ section.pack-backg {
     height: 100vh;
     background: linear-gradient(80deg, #7F2DE5 10%, #1AE1D9 100%);
 }
+
+section.pack-backg img.pack {
+    width: 200px;
+    height: 330px;
+}
+
+section.pack-backg img.logo {
+    width: 200px;
+    height: 109px;
+}
