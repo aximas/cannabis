@@ -27,5 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         inputsValue.push(item.value);
 
     })
+
     
 })

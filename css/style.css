@@ -1,33 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+
 *, html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
+
+p {
+    margin-bottom: 0;
+}
+
 
 body {
     position: relative;
     width: 100%;
+    overflow-x: hidden;
 }
 
-.left-line {
+hr {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+section.welcome hr.left-line {
     position: absolute;
     top: 0;
     left: 12%;
-    width: .1px;
+    width: .3px;
     height: 100%;
     background-color: #FAFAFF;;
     opacity: .3;
 }
 
-.right-line {
+section.welcome hr.right-line {
     position: absolute;
     top: 0;
     right: 12%;
-    width: .1px;
+    width: .3px;
     height: 100%;
     background-color: #FAFAFF;
     opacity: .3;
 }
+
+section.welcome hr.rotated-line:nth-child(1) {
+    position: absolute;
+    top: -5%;
+    right: 6.2%;
+    width: .3px;
+    height: 110%;
+    background-color: #FAFAFF;
+    opacity: .3;
+    transform: rotate(-12deg);
+}
+
+section.welcome hr.rotated-line:nth-child(2) {
+    position: absolute;
+    top: -5%;
+    left: 6.2%;
+    width: .3px;
+    height: 110%;
+    background-color: #FAFAFF;
+    opacity: .3;
+    transform: rotate(-12deg);
+}
+
+
 
 .central-line {
     position: absolute;
@@ -53,7 +91,7 @@ section.welcome {
     background-repeat: no-repeat;
     background-position: top; */
     padding: 30px 0;
-    /* position: relative; */
+    position: relative;
 }
 
 section.welcome .wrapper {
@@ -71,7 +109,7 @@ section.welcome .wrapper {
 section.welcome::before {
     position: absolute;
     content: '';
-    top: 4%;
+    top: 10%;
     left: 0;
     display: block;
     width: 100%;
@@ -83,7 +121,7 @@ section.welcome::before {
 section.welcome::after {
     position: absolute;
     content: '';
-    top: 34%;
+    top: 90%;
     left: 0;
     display: block;
     width: 100%;
@@ -189,7 +227,7 @@ section.experience  .central-line {
 
 section.experience hr.top-line {
     position: absolute;
-    top: 7%;
+    top: 10%;
     left: 0;
     width: 100%;
     height: .5px;
@@ -289,6 +327,8 @@ section.experience::after {
 }
 
 
+
+
 /* pack-backg */
 
 section.pack-backg { 
@@ -297,14 +337,370 @@ section.pack-backg {
     width: 100%;
     height: 100vh;
     background: linear-gradient(80deg, #7F2DE5 10%, #1AE1D9 100%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
+
+section.pack-backg .row {
+    width: 100%;
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+}
+
+section.pack-backg .row img {
+    user-select: none;
+}
+
+
+section.pack-backg .row:nth-child(1) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: absolute;
+    top: -26%;
+    left: -89%;
+    animation: animate 60s linear infinite;
+    animation-delay: -30s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+section.pack-backg .row:nth-child(2) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: absolute;
+    top: 18%;
+    left: -110%;
+    animation: animate2 60s linear infinite;
+    animation-delay: -30s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+section.pack-backg .row:nth-child(3) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: -89%;
+    animation: animate2 60s linear infinite;
+    animation-delay: -30s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 
 section.pack-backg img.pack {
     width: 200px;
-    height: 330px;
+    height: auto;
+    margin-left: 80px;
+    margin-right: 80px;
+
 }
 
 section.pack-backg img.logo {
     width: 200px;
-    height: 109px;
+    height: auto;
 }
+
+/* section new started */
+
+section.new {
+    width: 100%;
+    height: 100%;
+    /* max-height: 100vh; */
+    background-color: #fff;
+    position: relative;
+}
+
+section.new .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+section.new  .central-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    width: .5px;
+    height: 100%;
+    opacity: .3;
+    background: #3C4F76;
+
+}
+
+section.new hr.top-line {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: .5px;
+    background-color: #3C4F76;;
+    opacity: .3;
+}
+
+section.new hr.bottom-line {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: .5px;
+    background-color: #3C4F76;;
+    opacity: .3;
+}
+
+section.new::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: .1px;
+    height: 100%;
+    background-color: #3C4F76;;
+    opacity: .3;
+}
+
+section.new::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 12%;
+    width: .1px;
+    height: 100%;
+    background-color: #3C4F76;
+    opacity: .3;
+}
+
+.new-header {
+    width: 140px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.new-header img {
+    width: 80px;
+    height: 44px;
+}
+
+section.new .new-main-text {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+section.new .new-main-text h3 {
+    font-family: 'Branding SF', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    /* blacks / black 100 */
+    color: #3C4F76;
+}
+
+section.new .new-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 98px;
+}
+
+section.new .new-text p {
+    font-family: 'Branding SF', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    text-align: right;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    /* blacks / black 100 */
+    color: #3C4F76;
+    margin: 0 20px;
+}
+
+section.new .new-text .line {
+    width: 280px;
+    height: 2px;
+    background: linear-gradient(90deg, #1AE1D9 0%, #7F2DE5 100%);
+}
+
+/* community */
+
+section.community {
+    width: 100%;
+    height: 100%;
+    position: relative;  
+    padding-top: 80px;
+    padding-bottom: 80px;  
+    }
+
+    section.community .left-side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-blend-mode: multiply;
+        background-image: url(../img/Rectangle.png);
+        background-color: linear-gradient(68.66deg, rgba(127,45,229, 10%) 0%, #1AE1D9 100%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    section.community .right-side {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url(../img/pattern.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    section.community .center-rect {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 960px;
+        width: 100%;
+        min-height: 552px;
+        background: linear-gradient(68.66deg, rgba(127, 45, 229, 0.9) 0%, rgba(26, 225, 217, 0.9) 100%);
+        backdrop-filter: blur(8px);
+    }
+
+    section.community .center-rect .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 67px 80px;
+        
+    }
+
+    section.community .center-rect .wrapper div:nth-of-type(1) {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    section.community .center-rect .wrapper div:nth-of-type(1) h3 {
+        font-family: 'Branding SF', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 48px;
+        /* or 120% */
+
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+
+        /* whites / white 100 */
+
+        color: #FAFAFF;
+    }
+
+   
+
+    section.community .center-rect .wrapper div:nth-of-type(2) .row  {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 45px;
+    }
+
+    section.community .center-rect .wrapper div:nth-of-type(2) .row .left-bl {
+        width: auto;
+        display: flex;
+        flex-direction: row nowrap;
+    }
+
+    section.community .center-rect .wrapper div:nth-of-type(2) .row .right-bl {
+        width: 100%;
+        max-width: 320px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        margin-left: 54px;
+    }
+
+    section.community .center-rect .wrapper div:nth-of-type(2) .row .right-bl hr {
+        width: 100%;
+        height: 1px;
+        background: #FAFAFF;
+        opacity: 0.3;
+    }
+
+    section.community .center-rect .wrapper div:nth-of-type(2) .row .right-bl p {
+        width: 100%;
+        max-width: 264px;
+        font-family: 'Branding SF', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 32px;
+        color: #FAFAFF;
+        margin-top: auto;
+    }
+
+    section.community .center-rect .wrapper div:nth-of-type(2) .row .left-bl h2 {
+      font-family: 'Chonburi', cursive;
+      font-style: normal;
+        font-weight: normal;
+        font-size: 80px;
+        line-height: 80px;
+        /* identical to box height, or 100% */
+
+        text-align: center;
+        text-transform: uppercase;
+        /* color: transparent; */
+        color: transparent; /* прозрачный цвет букв */
+        -webkit-text-stroke: 1px #fff;
+    }
